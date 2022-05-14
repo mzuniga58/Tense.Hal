@@ -263,14 +263,13 @@ namespace Tense.Hal
             {
                 foreach (var headerValue in acceptHeader.Value)
                 {
-                    var match = Regex.Match(headerValue, "application\\/(?<style>[a-z-A-Z0-9]+)\\.v(?<version>[0-9]+)\\+(?<media>.*)", RegexOptions.IgnoreCase);
+                    var match = Regex.Match(headerValue, "application\\/(?<style>[a-z-A-Z0-9]+)(\\.v(?<version>[0-9]+)){0,1}\\+(?<media>.*)", RegexOptions.IgnoreCase);
 
                     if (match.Success)
                     {
                         style = match.Groups["style"].Value;
                         version = match.Groups["version"].Value;
                         media = match.Groups["media"].Value;
-                        break;
                     }
 
                     if (!string.IsNullOrWhiteSpace(style) &&

@@ -10,7 +10,7 @@
 	  <Description>A library to add HAL and Hateoas support to RESTful Web Services</Description>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <RepositoryUrl>https://github.com/mzuniga58/Tense.Hal</RepositoryUrl>
-	  <Version>0.0.2-alpha</Version>
+	  <Version>0.0.3-alpha</Version>
 	  <PackageReleaseNotes>Pre-release. DO NOT USE.</PackageReleaseNotes>
 	  <PackageId>Tense.Hal</PackageId>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
