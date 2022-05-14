@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.1</TargetFramework>
+	  <LangVersion>latest</LangVersion>
+	  <Nullable>enable</Nullable>
+	  <Copyright>(C) 2022 Michael Zuniga</Copyright>
+	  <Authors>Michael Zuniga</Authors>
+	  <Company>Michael Zuniga</Company>
+	  <Description>A library to add HAL and Hateoas support to RESTful Web Services</Description>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/mzuniga58/Tense.Hal</RepositoryUrl>
+	  <Version>0.0.2-alpha</Version>
+	  <PackageReleaseNotes>Pre-release. DO NOT USE.</PackageReleaseNotes>
+	  <PackageId>Tense.Hal</PackageId>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <PackageTags>REST, RQL, HAL, Hateoas, Resource Query Language, Web Services, Web API, RESTful</PackageTags>
+	  <NeutralLanguage>en-US</NeutralLanguage>
+	  <Title>Tense.Hal</Title>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <PackageIcon>ico64.png</PackageIcon>
+	  <ApplicationIcon>Resources\MZ.ico</ApplicationIcon>
+	  <PackageIconUrl>https://github.com/mzuniga58/Tense.Hal/Tense.Hal/Resources/MZ.ico</PackageIconUrl>
+	  <PackageProjectUrl>https://github.com/mzuniga58/Tense.Hal</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="Resources\ico64.png" Pack="true" PackagePath="\" />
+		<None Include="Resources\MZ.ico" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
