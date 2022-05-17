@@ -21,6 +21,27 @@ namespace Tense.Hal
         }
 
         /// <summary>
+        /// Register a configuration set
+        /// </summary>
+        /// <param name="source"></param>
+        public void Register(IHalConfiguration source)
+        {
+            foreach ( var entry in source.Configuration )
+            {
+                _links.Add(entry.Key, entry.Value);
+            }
+        }
+
+        /// <summary>
+        /// Returns the configuration from the IHalConfiguration interface
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<Type, Dictionary<string, ILinkOptions>> GetConfiguration 
+        {
+            get { return _links; }
+        }
+
+        /// <summary>
         /// Adds a templated link to the list of links
         /// </summary>
         /// <typeparam name="T">The type of objet the link refers to.</typeparam>
