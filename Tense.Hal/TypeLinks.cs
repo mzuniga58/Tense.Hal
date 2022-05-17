@@ -36,7 +36,7 @@ namespace Tense.Hal
         /// Returns the configuration from the IHalConfiguration interface
         /// </summary>
         /// <returns></returns>
-        public Dictionary<Type, Dictionary<string, ILinkOptions>> GetConfiguration 
+        public Dictionary<Type, Dictionary<string, ILinkOptions>> Configuration 
         {
             get { return _links; }
         }

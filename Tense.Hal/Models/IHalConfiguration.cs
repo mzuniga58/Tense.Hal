@@ -17,5 +17,10 @@ namespace Tense.Hal
         /// Gets the configuration
         /// </summary>
         Dictionary<Type, Dictionary<string, ILinkOptions>> Configuration { get; }
+
+        /// <summary>
+        /// Registers a child configuration
+        /// </summary>
+        void Register(IHalConfiguration configuration);
     }
 }
